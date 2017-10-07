@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-//import { smoothlyMenu } from '../../../app.helpers';
+import { smoothlyMenu } from '../../../app.helpers';
 import { Router } from '@angular/router';
-//declare var jQuery:any;
+declare var jQuery:any;
 
 @Component({
     selector: 'topnavbar',
@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 export class TopnavbarComponent {
     constructor(private router: Router,) { }
 
-    //toggleNavigation(): void {
-    //    jQuery("body").toggleClass("mini-navbar");
-    //    smoothlyMenu();
-    //}
+    toggleNavigation(): void {
+       jQuery("body").toggleClass("mini-navbar");
+       smoothlyMenu();
+    }
    
     logout(){
 
