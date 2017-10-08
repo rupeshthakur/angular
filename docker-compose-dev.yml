@@ -1,0 +1,13 @@
+# this is our development docker-compose building on top of the production docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "2"
+services:
+  irisapp:
+    volumes:
+      - appcode-native-osx-sync:/irisapp:nocopy # will be mounted on /irisapp
+
+# that the important thing
+volumes:
+  appcode-native-osx-sync:
+    external: true

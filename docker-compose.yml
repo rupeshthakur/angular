@@ -1,23 +1,8 @@
-version: '3'
+version: '2'
 services:
-  Ng4:
-    image: localhost:5000/angular4_image_iris:latest
-    #command: python cmdb.py config/config_dev.py
+  irisapp:
+    image: iris:iris
     ports:
-     - "8080:80"
-    #volumes:
-    # - cmdb:/code
-    deploy:
-      mode: replicated
-      replicas: 1
-      labels: [APP=Ngular4_Iirs]
-      placement:
-        constraints: [node.role == worker]
-    # service restart policy
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
-#volumes:
-#  cmdb:
+     - "80:3000"
+    #command: ['watch','-n9','npm']
+    entrypoint: /irisapp/entrypoint.sh
