@@ -8,7 +8,7 @@ import {blankComponent} from "./components/common/layouts/blank.component";
 import {basicComponent} from "./components/common/layouts/basic.component";
 
 import { DataResolver } from './app.resolver';
-
+import {toolsViewComponent} from "./views/tools-view/tools-view.component";
 //export const ROUTES: Routes = [
   //{ path: '', redirectTo: 'home', pathMatch: 'full' },
   //{ path: 'login', component: LoginFormComponent },
@@ -30,6 +30,7 @@ export const ROUTES:Routes = [
     children: [
       {path: 'home', component: mainViewComponent},
       {path: 'minorView', component: minorViewComponent},
+      {path: 'toolsView', component: toolsViewComponent},
     ]
   },
   // Handle all other routes

@@ -25,6 +25,7 @@ import '../styles/styles.scss';
 // App views
 import {MainViewModule} from "./views/main-view/main-view.module";
 import {MinorViewModule} from "./views/minor-view/minor-view.module";
+import {ToolsViewModule} from "./views/tools-view/tools-view.module";
 
 // App modules/components
 import {LayoutsModule} from "./components/common/layouts/layouts.module";
@@ -62,6 +63,7 @@ type StoreType = {
     // Views
     MainViewModule,
     MinorViewModule,
+    ToolsViewModule,
     
     //RegisterModule,
 
